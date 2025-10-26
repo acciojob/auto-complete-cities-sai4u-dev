@@ -1,1 +1,47 @@
 
+/* Basic CSS for the Autocomplete component */
+
+.autocomplete-container {
+  /* This is crucial: allows the list to be positioned relative to the container */
+  position: relative; 
+  width: 300px; /* Example width */
+  margin: 20px;
+}
+
+.autocomplete-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.suggestions-list {
+  position: absolute; /* Positions the list over other content */
+  top: 100%; /* Start right below the input field */
+  left: 0;
+  right: 0;
+  z-index: 100; /* Ensure it stays on top */
+  margin: 0;
+  padding: 0;
+  list-style: none; /* Remove bullet points */
+  border: 1px solid #ccc;
+  border-top: none; /* Make it look connected to the input */
+  background: white;
+  max-height: 200px; /* Limit height and make it scrollable */
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
